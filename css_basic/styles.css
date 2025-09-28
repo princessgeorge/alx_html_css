@@ -1,0 +1,35 @@
+/* Body as column  flex container*/
+
+body {
+    display: flex;
+    flex-direction: column;
+height: 100vh; /*full viewport height*/
+margin: 0;
+}
+
+/* Step 3: main as row flex container */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* let main take automatic available space */
+}
+
+/* Step 4: article 2/3, aside 1/3, both scrollable */
+article {
+  flex: 2;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+aside {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* Step 5: header/footer basic look 
+header, footer {
+  background: #f0f0f0;
+  padding: 1rem;
+  text-align: center;
+}*/
