@@ -15,6 +15,7 @@ header{
 
 nav{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -22,6 +23,7 @@ nav{
 nav ul {
 list-style: none;
 display: flex;
+flex-wrap: wrap;
 gap: 30px;
 margin: 0;
 padding: 0;
@@ -96,6 +98,7 @@ margin-top: 500px;
 
 .hero-images{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 100px;
     margin-top: 100px;
@@ -103,6 +106,7 @@ margin-top: 500px;
 
 .quote{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -195,6 +199,7 @@ margin-bottom: 5px;
 
 .author{
     display: flex;
+    flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   margin-top: 10px;
@@ -274,6 +279,7 @@ gap: 25px;
 
 .cta{
 display: flex;
+flex-wrap: wrap;
 justify-content: center;  /* centers button horizontally */
 align-items: center;      /* centers button vertically */
 height: 200px; 
@@ -346,6 +352,7 @@ font-size: 1rem;
 
 .footer-pics{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -354,6 +361,7 @@ font-size: 1rem;
 
 .footer-icons{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
