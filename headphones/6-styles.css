@@ -1,0 +1,194 @@
+/* 6-styles.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root{
+  --bg: #071629;
+  --card-shadow: 0 8px 24px rgba(7,22,41,0.45);
+  --accent: #FF6565;
+  --muted: #c9d2da;
+  --max-width: 1000px;
+  --gap: 28px;
+}
+
+/* Page / section layout */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #071629 0%, #0b2130 100%);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+
+/* Container center */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Our results section */
+.our-result {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+
+.section-intro {
+  color: var(--muted);
+  margin-bottom: 36px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pentagons container */
+.our-result-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Pentagons themselves */
+/* clip-path creates the 5 sided shape */
+.pentagon {
+  width: 210px;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(
+    50% 0%,
+    90% 35%,
+    72% 90%,
+    28% 90%,
+    10% 35%
+  );
+  -webkit-clip-path: polygon(
+    50% 0%,
+    90% 35%,
+    72% 90%,
+    28% 90%,
+    10% 35%
+  );
+  background: linear-gradient(135deg, rgba(255,101,101,0.95), rgba(255,153,102,0.85));
+  box-shadow: var(--card-shadow);
+  transition: transform 300ms cubic-bezier(.2,.8,.2,1), box-shadow 300ms;
+  cursor: default;
+  position: relative;
+  user-select: none;
+}
+
+/* Alternate gradient variations for visual variety */
+.pentagon:nth-child(2) {
+  background: linear-gradient(135deg, #5fd3b8, #2fbba6);
+}
+.pentagon:nth-child(3) {
+  background: linear-gradient(135deg, #7aa7ff, #5b7cff);
+}
+.pentagon:nth-child(4) {
+  background: linear-gradient(135deg, #ffd86b, #ffb86b);
+}
+
+/* Inner content box to layout value and label */
+.pentagon-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 18px;
+}
+
+/* Big value / headline inside pentagon */
+.pentagon-value {
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 6px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+/* Small label */
+.pentagon-label {
+  font-size: 0.9rem;
+  opacity: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+/* Hover / focus effects */
+.pentagon:hover,
+.pentagon:focus {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(7,22,41,0.6);
+  outline: none;
+}
+
+/* Make the shape accessible by keyboard */
+.pentagon:focus {
+  box-shadow: 0 18px 40px rgba(7,22,41,0.6), 0 0 0 4px rgba(255,101,101,0.12);
+}
+
+/* Responsive: reduce size on tablet */
+@media (max-width: 900px) {
+  .pentagon {
+    width: 170px;
+    height: 170px;
+  }
+  .pentagon-value {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile: stack pentagons centered and full width-ish */
+@media (max-width: 480px) {
+  .our-result {
+    padding: 60px 16px;
+  }
+
+  .our-result-imgs {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .pentagon {
+    width: 86%;
+    max-width: 320px;
+    height: calc(86%); /* keep roughly square proportion */
+    min-height: 140px;
+  }
+
+  .pentagon-value {
+    font-size: 1.5rem;
+  }
+
+  .pentagon-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* Optional: small decorative shadow / separator between rows */
+.our-result-imgs > .pentagon {
+  transition: transform .25s ease, box-shadow .25s ease;
+}

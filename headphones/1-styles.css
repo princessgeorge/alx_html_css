@@ -139,3 +139,56 @@ button:hover {
     font-size: 0.9rem;
   }
 }
+.what-we-do{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  text-align: center;
+  color:071629;
+  padding: 40px 20px;
+}
+.what-we-do-imgs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 50px;
+  justify-content: center;
+}
+.what-we-do p{
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+/* 📱 Mobile and small screens (≤ 768px) */
+@media (max-width: 768px) {
+  .what-we-do {
+    height: auto;              /* Let content define the height */
+    padding: 80px 20px;        /* Add breathing room */
+  }
+
+  .what-we-do-imgs {
+    flex-direction: column;    /* Stack images vertically */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .what-we-do p {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 Very small screens (≤ 480px) */
+@media (max-width: 480px) {
+  .what-we-do {
+    padding: 100px 20px 60px;  /* Prevent overlap with previous section */
+  }
+
+  .what-we-do p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+

@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-wrapper {
+  background: url('./images/headphones_hero_1.jpg') no-repeat center center/cover;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px 50px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-logo img {
+  width: 50%;
+  height: auto;
+}
+
+/* Navbar links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+nav ul li a:hover {
+  color: #FF6565;
+}
+
+/* Toggle icon */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero section */
+.header-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.header-text {
+  margin-bottom: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header-text h1 {
+  font-weight: bold;
+}
+
+.header-one button {
+  background-color: #ff6565;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e05555;
+  transform: scale(1.05);
+}
+
+/* 📱 Mobile view (480px and below) */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    border-radius: 10px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .header-one {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .header-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .header-text p {
+    font-size: 0.9rem;
+  }
+}
+.what-we-do{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  text-align: center;
+  color:071629;
+  padding: 40px 20px;
+}
+.what-we-do-imgs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 50px;
+  justify-content: center;
+}
+.what-we-do p{
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+/* 📱 Mobile and small screens (≤ 768px) */
+@media (max-width: 768px) {
+  .what-we-do {
+    height: auto;              /* Let content define the height */
+    padding: 80px 20px;        /* Add breathing room */
+  }
+
+  .what-we-do-imgs {
+    flex-direction: column;    /* Stack images vertically */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .what-we-do p {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 Very small screens (≤ 480px) */
+@media (max-width: 480px) {
+  .what-we-do {
+    padding: 100px 20px 60px;  /* Prevent overlap with previous section */
+  }
+
+  .what-we-do p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+.our-result{
+  background: url('./images/headphones_hero_2.jpg') no-repeat center center/cover;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  text-align: center;
+  color:071629;
+  padding: 40px 20px;
+}
+.our-result-imgs{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
+  justify-content: center;
+}
+.our-result p{
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+.our-result {
+  background: url('./images/headphones_hero_2.jpg') no-repeat center center/cover;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.our-result p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.our-result-imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+/* 🌍 Tablet view (≤ 768px) */
+@media (max-width: 768px) {
+  .our-result {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .our-result p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .our-result-imgs {
+    flex-direction: column;
+    align-items: center;     /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center;      /* Center any inline text below images */
+    width: 100%;
+  }
+
+  .our-result-imgs img {
+    display: block;          /* Remove inline gaps */
+    margin: 0 auto;          /* Center images horizontally */
+    max-width: 90%;          /* Scale images nicely */
+    height: auto;
+  }
+}
+
+/* 📱 Small screens (≤ 480px) */
+@media (max-width: 480px) {
+  .our-result {
+    padding: 120px 20px 60px;
+    height: auto;
+  }
+
+  .our-result p {
+    font-size: 0.9rem;
+  }
+
+  .our-result-imgs {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .our-result-imgs img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;              /* Full-page section */
+  background-color: white;  /* You can change this */
+  text-align: center;
+  gap: 40px;                  /* Space between lines and button */
+}
+
+.contact-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;                  /* Space between lines */
+}
+
+.contact-lines .line {
+  width: 200px;               /* Length of each line */
+  height: 1px;                /* Thickness */
+  background-color: black;  /* Line color */
+ margin-bottom: 50px;
+}
+
+.contact-us button {
+  background-color: #ff6565;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.contact-us button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 480px) {
+  .contact-us {
+    height: auto;
+    padding: 100px 20px;
+    gap: 30px;
+  }
+
+  .contact-lines .line {
+    width: 100px;
+  }
+}

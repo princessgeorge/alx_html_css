@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headphones</title>
+  <link rel="stylesheet" href="4-styles.css">
+ <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a2b055604.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="hero-wrapper">
+    <header>
+      <nav>
+        <div class="nav-logo">
+          <img src="./images/logo_headphones.png" alt="logo">
+        </div>
+
+        <!-- Toggle icon for mobile -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+
+        <ul id="nav-links">
+          <li><a href="#">What we do</a></li>
+          <li><a href="#">Our results</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="header-one">
+        <div class="header-text">
+          <h1>Lorem ipsum dolor sit amet lorem ipsum</h1>
+          <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+        </div>
+        <button>CALL TO ACTION</button>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+          Nobis deleniti perspiciatis et recusandae natus nemo aperiam est accusantium!<br>
+          Accusamus aperiam, omnis voluptatibus praesentium <br>
+          nesciunt quia natus odio recusandae minus odit!
+        </p>
+      </section>
+    </main>
+  </div>
+<section class="what-we-do">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+        Quam, assumenda perspiciatis fugiat deleniti quos voluptatum, <br>
+        autem laudantium culpa pariatur consectetur ipsum ipsa magnam  <br>veritatis delectus odio vel,
+         voluptates libero? Asperiores!</p>
+         <div class="what-we-do-imgs">
+            <div>
+                <img src="./images/ic_01.png">
+            </div>
+            <div>
+              <img src="./images/ic_02.png">
+            </div>
+            <div>
+              <img src="./images/ic_03.png">
+            </div>
+            <div>
+              <img src="./images/ic_04.png">
+            </div>
+         </div>
+</section>
+<section class="our-result">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+        Quam, assumenda perspiciatis fugiat deleniti quos voluptatum, <br>
+        autem laudantium culpa pariatur consectetur ipsum ipsa magnam  <br>veritatis delectus odio vel,
+         voluptates libero? Asperiores!</p>
+         <div class="our-result-imgs">
+            <div>
+                <img src="./images/dot_1.png">
+            </div>
+            <div>
+              <img src="./images/dot_1.png">
+            </div>
+            <div>
+              <img src="./images/dot_1.png">
+            </div>
+            <div>
+              <img src="./images/dot_1.png">
+            </div>
+         </div>
+</section>
+
+<section class="contact-us">
+  <div class="contact-lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <button>CALL TO ACTION</button>
+</section>
+
+<footer>
+    <section class="footer">
+        <div class="footer-pics">
+<div >
+    <img src="./images/logo_headphones.png"> </div>
+<div class="footer-icons">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
+</div>
+</div>
+<div class="footer-para">
+<p>©headphones 2020</p> </div>
+    </section>
+</footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
